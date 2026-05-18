@@ -240,26 +240,12 @@ if(typeof DB === 'undefined') {
         </div>
       </div>
     </div>
-    <div class="hint">
       💡 Introduceți codul → apăsați <b>Enter</b> pentru a adăuga. Sau căutați după denumire și faceți clic pe rezultat.<br>
       📋 Căutarea include <b id="dbCount">...</b> servicii + pozițiile din Farmacia + catalogul manual. <span id="priceSourceHint"></span>
     </div>
     <div style="margin-top:10px;border-top:1px solid #e8eaf0;padding-top:10px">
       <div class="grid3">
         <div>
-          <label>Catalog manual CSV/XLS salvat ca CSV</label>
-          <input id="manualCatalogFile" type="file" accept=".csv,text/csv" onchange="importManualCatalogFile(this.files[0])">
-        </div>
-        <div>
-          <label>Status catalog manual</label>
-          <input id="manualCatalogStatus" readonly value="Nu este încărcat" style="background:#f8faff">
-        </div>
-        <div style="display:flex;align-items:end;gap:8px">
-          <button class="btn btn-secondary" onclick="downloadManualTemplate()">⬇️ Șablon CSV</button>
-          <button class="btn btn-danger" onclick="clearManualCatalog()">Șterge catalogul</button>
-        </div>
-      </div>
-      <div class="hint">
         Pentru medicamente care lipsesc din Farmacia: completați tabelul <b>catalog_manual.csv</b> în Excel/Google Sheets, apoi încărcați-l aici.
         După încărcare se salvează în browser și intră automat în căutare.
       </div>
